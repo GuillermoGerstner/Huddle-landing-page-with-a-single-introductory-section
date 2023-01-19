@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --Violet: hsl(257, 40%, 49%);
+    --SoftMagenta: hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    background-color: var(--Violet);
+    background-image: url('./files/images/bg-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+    @media only screen and (max-width: 595px) {
+        background-size: cover;
+    }
+
+    @media only screen and (min-width: 1284px) {
+        background-image: url('./files/images/bg-desktop.svg');
+        background-size: unset;
+    }
+}
+
+.main-container {
+    width: 595px;
+    height: 1448px;
+    margin: 75px auto 40px;
+
+    @media only screen and (min-width: 1284px) {
+        margin: 60px auto 0px;
+        width: 1284px;
+        height: 700px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.figure {
+    height: 724px;
+
+    @media only screen and (min-width: 1284px) {
+        width: 753px;
+        height: 700px;
+    }
+
+    &__logo {
+
+        &-container {
+            width: 180px;
+
+            @media only screen and (min-width: 1284px) {
+                height: 134px;
+            }
+        }
+    }
+
+    &__mockup {
+        width: 595px;
+
+        @media only screen and (min-width: 1284px) {
+            width: 696px;
+        }
+
+        &-container {
+            background-color: rgba(0, 255, 255, 0);
+        }
+    }
+}
+
+.content {
+    height: 724px;
+
+    @media only screen and (min-width: 1284px) {
+        height: 700px;
+    }
+
+    &__title {
+        font-family: 'Poppins', sans-serif;
+        font-size: 46px;
+        text-align: center;
+        height: 170px;
+
+        @media only screen and (min-width: 1284px) {
+            margin-top: 165px;
+            height: 133px;
+            font-size: 39px;
+            text-align: left;
+            padding-right: 93px;
+        }
+    }
+
+    &__description {
+        font-size: 31px;
+        text-align: center;
+        height: 280px;
+
+        @media only screen and (min-width: 1284px) {
+            height: 98px;
+            font-size: 18px;
+            text-align: left;
+            padding-right: 17px;
+        }
+    }
+
+    &__button {
+        text-align: center;
+        margin-bottom: 122px;
+
+        @media only screen and (min-width: 1284px) {
+            text-align: left;
+            margin-bottom: 179px;
+        }
+    }
+    &__button a {
+        width: 400px;
+        height: 86px;
+        border-radius: 50px;
+        font-size: 25px;
+        color: var(--Violet);
+        background-color: white;
+        display: inline-block;
+        padding-top: 22px;
+        text-decoration: none;
+
+        &:hover {
+            background-color: var(--SoftMagenta);
+            color: white;
+        }
+
+        @media only screen and (min-width: 1284px) {
+            width: 200px;
+            height: 58px;
+            font-size: 20px;
+            padding-top: 14px;
+            text-align: center;
+        }
+    }
+
+    &__social {
+        text-align: center;
+
+        @media only screen and (min-width: 1284px) {
+            text-align: right;
+        }
+
+        &-links {
+            width: 208px;
+            display: inline-flex;
+            justify-content: space-between;
+
+            @media only screen and (min-width: 1284px) {
+                width: 156px;
+            }
+        }
+        &-links a{
+            border: 2px solid white;
+            text-decoration: none;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 28px;
+            padding-top: 12px;
+
+            &:hover {
+                border-color: var(--SoftMagenta);
+                color: var(--SoftMagenta);
+                cursor: pointer;
+            }
+
+            @media only screen and (min-width: 1284px) {
+                width: 44px;
+                height: 44px;
+                font-size: 22px;
+                padding-top: 8px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+.attribution {
+    color: black;
+}
+.attribution a{
+    color: white;
+}
+
+footer {
+    width: 595px;
+    margin: 0px auto 20px;
+
+    @media only screen and (min-width: 1284px) {
+        width: 1284px;
+    }
+}
